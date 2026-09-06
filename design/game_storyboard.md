@@ -19,8 +19,8 @@ TODO: The baker arrives home on Friday, and steps into her living room from the 
 Project One requires a minimum of eight rooms.
 
 1. TODO: Living room 
-2. TODO: Bathroom 
-3. TODO: Towel closet
+2. TODO: Towel closet 
+3. TODO: Bathroom
 4. TODO: Cleaning closet
 5. TODO: Bedroom
 6. TODO: Laundry room
