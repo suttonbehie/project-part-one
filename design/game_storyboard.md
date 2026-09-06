@@ -34,8 +34,8 @@ Project One requires a minimum of eight rooms.
 With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
-1. TODO: Mop
-2. TODO: Kitchen towels
+1. TODO: Kitchen towels
+2. TODO: Mop
 3. TODO: Cleaning spray
 4. TODO: Broom
 5. TODO: Scrub daddy
