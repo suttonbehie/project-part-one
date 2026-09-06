@@ -7,7 +7,7 @@
 
 **Theme:**
 
-TODO: Name and briefly describe your game's theme.
+TODO: The game centers around a baker trying to make a cake for a birthday party, but her kitchen is a total wreck after a crazy week. She has to go around her house to find all the cleaning type supplies so that she can clean her kitchen(kitchen being the villain). 
 
 **Storyline:**
 
@@ -18,14 +18,14 @@ the player must gather, and the threat created by the villain.
 
 Project One requires a minimum of eight rooms.
 
-1. TODO: Start room
-2. TODO: Room
-3. TODO: Room
-4. TODO: Room
-5. TODO: Room
-6. TODO: Room
-7. TODO: Room
-8. TODO: Villain room
+1. TODO: Living room 
+2. TODO: Bathroom 
+3. TODO: Towel closet
+4. TODO: Cleaning closet
+5. TODO: Bedroom
+6. TODO: Laundry room
+7. TODO: Pantry closet
+8. TODO: Kitchen
 
 Add more rooms if your design needs them.
 
@@ -34,19 +34,19 @@ Add more rooms if your design needs them.
 With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
-1. TODO: Item
-2. TODO: Item
-3. TODO: Item
-4. TODO: Item
-5. TODO: Item
-6. TODO: Item
+1. TODO: Mop
+2. TODO: towels 
+3. TODO: Cleaning spray
+4. TODO: broom
+5. TODO: scrub daddy
+6. TODO: flour
 
 If you add rooms beyond the minimum, add an item for every additional room
 except the start room and villain room.
 
 ## Villain
 
-TODO: Identify and briefly describe the villain.
+TODO: The kitchen and the mess in it is the villain.  Before she makes the cake she has to collect the items she needs around her crazy house to clean the kitchen 
 
 ## Storyboard and Map Check
 
