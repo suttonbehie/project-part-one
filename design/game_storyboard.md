@@ -7,12 +7,12 @@
 
 **Theme:**
 
-TODO: The game centers around a baker trying to make a cake for a birthday party, but her kitchen is a total wreck after a crazy week. She has to go around her house to find all the cleaning type supplies so that she can clean her kitchen(kitchen being the villain). 
+The game centers around a baker trying to make a cake for her moms birthday party, but her house and kitchen is a total wreck after a crazy week. The birthday party is tomorrow so this all needs to happen tonight.  She has to go around her house to find all the cleaning supplies so that she can clean her kitchen(kitchen being the villain). It is not as simple as gathering everything from one room. She has pets and a full time job, so all of the things she needs to clean the messy kitchen are scattered through out her house. 
 
 **Storyline:**
 
-TODO: In one short paragraph, explain the setting, the player's goal, the items
-the player must gather, and the threat created by the villain.
+TODO: The baker arrives home on Friday, and steps into her living room from the front door. She is already stressed and knows that the kitchen is wreck after a long week. She is going to have to collect a few items from around the house to rid her kitchen of the mess so that she can make her moms birthday cake for tomorrow, Saturday. Without a clean kitchen, she simply cannot make the cake. Supplies must be collected first, then she can go into the kitchen and clean it, making it suitable to make a cake. She will have to gather a mop, kitchen towels, cleaning spray, a broom, a scrub daddy, and actually flour her pantry too, before she can make the cake. 
+
 
 ## Rooms
 
@@ -27,7 +27,7 @@ Project One requires a minimum of eight rooms.
 7. TODO: Pantry closet
 8. TODO: Kitchen
 
-Add more rooms if your design needs them.
+
 
 ## Items
 
@@ -35,18 +35,16 @@ With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
 1. TODO: Mop
-2. TODO: towels 
+2. TODO: Kitchen towels 
 3. TODO: Cleaning spray
-4. TODO: broom
-5. TODO: scrub daddy
-6. TODO: flour
+4. TODO: Broom
+5. TODO: Scrub daddy
+6. TODO: Flour
 
-If you add rooms beyond the minimum, add an item for every additional room
-except the start room and villain room.
 
 ## Villain
 
-TODO: The kitchen and the mess in it is the villain.  Before she makes the cake she has to collect the items she needs around her crazy house to clean the kitchen 
+TODO: The mess in the kitchen is the villain. She cannot make a cake with the mess in the kitchen. The baker has to collect all the supplies needed to clean the kitchen, before entering the kitchen. 
 
 ## Storyboard and Map Check
 
