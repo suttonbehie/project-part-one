@@ -9,17 +9,70 @@
 
 # TODO 1: Identify the information the movement process needs.
 # Consider the player's current room and movement command.
+SET current_room to "Living room" 
+SET direction_input to ""
+SET next_room to ""
 
 # TODO 2: Prompt for and receive the player's movement command.
+OUTPUT "You are currently in the " + current_room
+OUTPUT "Enter a direction to move (north, south, east, west) or type 'exit' to quit: "
+INPUT direction_input
 
 # TODO 3: Validate whether the requested movement is possible from the
 # current room. Show the decision clearly.
+# Based on game_map.drawio connections:
+# Living room (east) -> Towel closet
+# Towel closet (east) -> Bathroom
+# Bathroom (east) -> Cleaning closet, (south) -> Bedroom
+# Bedroom (south) -> Laundry room
+# Laundry room (south) -> Pantry closet
+# Pantry closet (west) -> Kitchen
 
-# TODO 4: Describe what happens when the movement command is valid.
+IF current_room EQUALS "Living room" AND direction_input EQUALS "east" THEN
+    SET is_valid_move TO TRUE
+    SET next_room TO "Towel closet"
+ELSE IF current_room EQUALS "Towel closet" AND direction_input EQUALS "east" THEN
+    SET is_valid_move TO TRUE
+    SET next_room TO "Bathroom"
+ELSE IF current_room EQUALS "Bathroom" AND direction_input EQUALS "east" THEN
+    SET is_valid_move TO TRUE
+    SET next_room TO "Cleaning closet"
+ELSE IF current_room EQUALS "Cleaning closet" AND direction_input EQUALS "west" THEN
+    SET is_valid_move TO TRUE
+    SET next_room TO "Bathroom"
+ELSE IF current_room EQUALS "Bathroom" AND direction_input EQUALS "south" THEN
+    SET is_valid_move TO TRUE
+    SET next_room TO "Bedroom"
+ELSE IF current_room EQUALS "Bedroom" AND direction_input EQUALS "south" THEN
+    SET is_valid_move TO TRUE
+    SET next_room TO "Laundry room"
+ELSE IF current_room EQUALS "Laundry room" AND direction_input EQUALS "south" THEN
+    SET is_valid_move TO TRUE
+    SET next_room TO "Pantry closet"
+ELSE IF current_room EQUALS "Pantry closet" AND direction_input EQUALS "west" THEN
+    SET is_valid_move TO TRUE
+    SET next_room TO "Kitchen"
+ELSE
+    SET is_valid_move TO FALSE
+
+
+TODO 4: Describe what happens when the movement command is valid.
 # Include the room update and player output.
+IF is_valid_move EQUALS TRUE THEN
+    SET current_room TO next_room
+    OUTPUT "You successfully move to the " + current_room + "."
+
 
 # TODO 5: Describe what happens when the movement command is invalid.
 # Include the output the player should receive.
+IF is_valid_move EQUALS FALSE THEN
+    OUTPUT "You cannot go that way! Your messy house blocks that path. Please choose a valid direction."
+
 
 # TODO 6: Show how movement fits into repeated gameplay.
 # The final game continues accepting commands until a required ending occurs.
+WHILE player has not chosen to exit DO
+    CALL prompt for movement command (TODO 2)
+    CALL validate movement (TODO 3)
+    IF valid THEN update room (TODO 4) ELSE display error (TODO 5)
+
