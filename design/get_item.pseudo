@@ -9,17 +9,60 @@
 
 # TODO 1: Identify the information the get-item process needs.
 # Consider the current room, item in that room, and player's inventory.
+SET current_room TO "Living room"
+SET player_inventory TO empty list
+SET item_input TO ""
 
 # TODO 2: Prompt for and receive the player's get-item command.
+OUTPUT "You are in the " + current_room
+OUTPUT "Enter a command (e.g., 'get <item_name>'): "
+INPUT item_input
 
 # TODO 3: Validate whether the requested item is available in the current
 # room. Show the decision clearly.
+Mapping items to rooms based on storyboard:
+# Towel closet -> "Kitchen towels"
+# Bathroom -> "Mop"
+# Cleaning closet -> "Cleaning spray"
+# Bedroom -> "Broom"
+# Laundry room -> "Scrub daddy"
+# Pantry closet -> "Flour"
 
-# TODO 4: Describe what happens when the item request is valid.
+SET room_item TO "None"
+
+IF current_room EQUALS "Towel closet" THEN
+    SET room_item TO "Kitchen towels"
+ELSE IF current_room EQUALS "Bathroom" THEN
+    SET room_item TO "Mop"
+ELSE IF current_room EQUALS "Cleaning closet" THEN
+    SET room_item TO "Cleaning spray"
+ELSE IF current_room EQUALS "Bedroom" THEN
+    SET room_item TO "Broom"
+ELSE IF current_room EQUALS "Laundry room" THEN
+    SET room_item TO "Scrub daddy"
+ELSE IF current_room EQUALS "Pantry closet" THEN
+    SET room_item TO "Flour"
+
+IF item_input MATCHES room_item AND room_item NOT EQUAL TO "None" THEN
+    SET is_valid_item TO TRUE
+ELSE
+    SET is_valid_item TO FALSE
+ENDIF
+TODO 4: Describe what happens when the item request is valid.
 # Include the inventory update and player output.
+IF is_valid_item EQUALS TRUE THEN
+    ADD room_item TO player_inventory
+    OUTPUT "You picked up the " + room_item + "!"
+    SET room_item TO "None"
 
 # TODO 5: Describe what happens when the item request is invalid.
 # Include the output the player should receive.
+IF is_valid_item EQUALS FALSE THEN
+    OUTPUT "That item is not in this room, or you entered an invalid command."
 
 # TODO 6: Show how the process returns to or continues the larger gameplay
 # loop after the command is handled.
+WHILE game is running DO
+    CALL prompt for item command (TODO 2)
+    CALL validate item (TODO 3)
+    IF valid THEN add to inventory (TODO 4) ELSE display error (TODO 5)
