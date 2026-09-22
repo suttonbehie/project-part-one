@@ -11,7 +11,7 @@
 # Consider the current room, item in that room, and player's inventory.
 SET current_room TO "Living room"
 SET player_inventory TO empty list
-SET item_input TO ""
+SET item_input TO "FALSE"
 
 # TODO 2: Prompt for and receive the player's get-item command.
 OUTPUT "You are in the " + current_room
@@ -42,27 +42,34 @@ ELSE IF current_room EQUALS "Laundry room" THEN
     SET room_item TO "Scrub daddy"
 ELSE IF current_room EQUALS "Pantry closet" THEN
     SET room_item TO "Flour"
+ENDIF
 
 IF item_input MATCHES room_item AND room_item NOT EQUAL TO "None" THEN
     SET is_valid_item TO TRUE
 ELSE
     SET is_valid_item TO FALSE
 ENDIF
+
 TODO 4: Describe what happens when the item request is valid.
 # Include the inventory update and player output.
 IF is_valid_item EQUALS TRUE THEN
     ADD room_item TO player_inventory
     OUTPUT "You picked up the " + room_item + "!"
     SET room_item TO "None"
+ENDIF
 
 # TODO 5: Describe what happens when the item request is invalid.
 # Include the output the player should receive.
 IF is_valid_item EQUALS FALSE THEN
     OUTPUT "That item is not in this room, or you entered an invalid command."
+ENDIF
 
 # TODO 6: Show how the process returns to or continues the larger gameplay
 # loop after the command is handled.
 WHILE game is running DO
     CALL prompt for item command (TODO 2)
     CALL validate item (TODO 3)
-    IF valid THEN add to inventory (TODO 4) ELSE display error (TODO 5)
+    IF valid THEN add to inventory (TODO 4)
+    ELSE display error (TODO 5)
+    ENDIF
+    ENDWHILE
