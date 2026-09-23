@@ -11,7 +11,7 @@
 # Consider the player's current room and movement command.
 SET current_room to "Living room" 
 SET direction_input to ""
-SET next_room to ""
+SET next_room to "FALSE"
 
 # TODO 2: Prompt for and receive the player's movement command.
 OUTPUT "You are currently in the " + current_room
@@ -54,20 +54,20 @@ ELSE IF current_room EQUALS "Pantry closet" AND direction_input EQUALS "west" TH
     SET next_room TO "Kitchen"
 ELSE
     SET is_valid_move TO FALSE
-
+ENDIF
 
 TODO 4: Describe what happens when the movement command is valid.
 # Include the room update and player output.
 IF is_valid_move EQUALS TRUE THEN
     SET current_room TO next_room
     OUTPUT "You successfully move to the " + current_room + "."
-
+ENDIF
 
 # TODO 5: Describe what happens when the movement command is invalid.
 # Include the output the player should receive.
 IF is_valid_move EQUALS FALSE THEN
     OUTPUT "You cannot go that way! Your messy house blocks that path. Please choose a valid direction."
-
+ENDIF
 
 # TODO 6: Show how movement fits into repeated gameplay.
 # The final game continues accepting commands until a required ending occurs.
@@ -75,4 +75,5 @@ WHILE player has not chosen to exit DO
     CALL prompt for movement command (TODO 2)
     CALL validate movement (TODO 3)
     IF valid THEN update room (TODO 4) ELSE display error (TODO 5)
-
+ENDIF
+ENDWHILE
